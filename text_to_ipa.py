@@ -58,11 +58,9 @@ def main(metadata_path, language, save_path, field):
                  punctuation=punctuation)
     df['text_ipa'] = df[args.field].apply(fn)
     df_new = df.to_dict('records')
-    with open(save_path, "w") as fp:
-        ndjson.dump(df_new, fp)
+    with open(save_path, "w", encoding="utf-8") as fp:
+        ndjson.dump(df_new, fp, ensure_ascii=False)
     print(f"Added ipa transcriptions and saved to {save_path}")
-    import pdb
-    pdb.set_trace()
 
 
 if __name__ == "__main__":
