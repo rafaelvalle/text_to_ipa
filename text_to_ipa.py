@@ -36,6 +36,7 @@ def get_phonemizer_output(text, phonemizer_backend, separator, punctuation):
         strip=True)[0]
     text_ipa = text_ipa.replace('|\p|', ' ')
     text_ipa = '{' + text_ipa + '}'
+    text_ipa = text_ipa.replace("{ ", "{")
     return text_ipa
 
 
