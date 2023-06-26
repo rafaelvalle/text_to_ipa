@@ -59,6 +59,7 @@ def main(metadata_path, language, save_path, field):
                  separator=separator,
                  punctuation=punctuation)
     df['text_ipa'] = df[args.field].apply(fn)
+    df['language'] = language
     df_new = df.to_dict('records')
     with open(save_path, "w", encoding="utf-8") as fp:
         ndjson.dump(df_new, fp, ensure_ascii=False)
