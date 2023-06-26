@@ -5,6 +5,7 @@ from phonemizer.backend import EspeakBackend
 from phonemizer.punctuation import Punctuation
 from phonemizer.separator import Separator
 
+# https://github.com/espeak-ng/espeak-ng/blob/master/docs/languages.md
 _phonemizer_language_map = {
     'hi_HI': 'hi',
     'hi': 'hi',
@@ -14,7 +15,7 @@ _phonemizer_language_map = {
     'en_US': 'en-us',
     'en': 'en-us',
     'de_DE': 'de',
-    'fr_FR': 'fr-fr',
+    'fr_FR': 'fr',
     'es_ES': 'es',
     'es_CO': 'es-419',
     'es_AR': 'es-419',
